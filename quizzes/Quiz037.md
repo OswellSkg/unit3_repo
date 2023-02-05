@@ -1,10 +1,11 @@
 # Task
-Help a business man find a major city in Japan and the distance in-between.
+Create a program that creates the SalemanMap using your OOP code.
 
-## Program
-### Code:
+# Program
+
 ```.py
 import random
+import matplotlib.pyplot as plt
 
 class coordinate:
     def __init__(self, x, y):
@@ -59,24 +60,30 @@ for name in ["Tokyo", "Yokohama", "Osaka", "Nagoya", "Sapporo", "Kobe", "Kyoto",
 #Homework
 for city_no in range(0,9):
     print(f"Distance from {Japan.cities[0].name} to {Japan.cities[city_no].name} is {Japan.cities[0].distance(Japan.cities[city_no])}")
-```
 
-### Proof: 
-Input: 
 
 for city_no in range(0,9):
-    print(f"Distance from {Japan.cities[0].name} to {Japan.cities[city_no].name} is {Japan.cities[0].distance(Japan.cities[city_no])}")
+    plt.scatter(Japan.cities[city_no].location.x, Japan.cities[city_no].location.y, marker="o", s=100)
+    plt.text(Japan.cities[city_no].location.x+0.5, Japan.cities[city_no].location.y+1,Japan.cities[city_no].name)
 
-Output: 
+# total_distance = 0
+#
+# for i in range(0,len(Japan.cities)-1):
+#     departure_city = Japan.cities[i]
+#     arrival_city = Japan.cities[i+1]
+#     x = [departure_city.location.x, arrival_city.location.x]
+#     y = [departure_city.location.y, arrival_city.location.y]
+#     plt.plot(x,y,color="pink")
+#     print(f"Connecting city {departure_city.name} to {arrival_city.name} | Distance:{departure_city.distance(arrival_city)}km")
+#     total_distance += departure_city.distance(arrival_city)
+#
+# print(f"The total distance for this solution of the salesman's problem is {total_distance}.")
 
-Distance from Tokyo to Tokyo is 0.0
-Distance from Tokyo to Yokohama is 72.11
-Distance from Tokyo to Osaka is 49.01
-Distance from Tokyo to Nagoya is 52.63
-Distance from Tokyo to Sapporo is 91.22
-Distance from Tokyo to Kobe is 93.41
-Distance from Tokyo to Kyoto is 66.04
-Distance from Tokyo to Fukuoka is 45.34
-Distance from Tokyo to Kawasaki is 72.2
+plt.title("Coordinates of Major cities in Tokyo")
+plt.xlabel("Latitude(m)")
+plt.ylabel("longitude(m)")
+plt.show()
+```
 
-<img width="1047" alt="Screen Shot 2023-01-19 at 22 30 47" src="https://user-images.githubusercontent.com/112055140/213455371-065cf98f-dd83-4e7b-b0b1-9d54b1923f69.png">
+# Proof: 
+![Screen Shot 2023-02-05 at 22 13 21](https://user-images.githubusercontent.com/112055140/216821002-fecee4f9-afec-496d-9951-6584b05ed7d2.png)
