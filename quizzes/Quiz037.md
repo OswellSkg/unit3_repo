@@ -28,3 +28,6 @@ class AccountingProgram:
 
 # UML Diagram
 ![IMG_4381](https://user-images.githubusercontent.com/112055140/216822109-c4926d5e-0600-4fb2-aeda-a3693273b87e.jpg)
+
+# Proof
+![Screen Shot 2023-02-06 at 20 54 43](https://user-images.githubusercontent.com/112055140/216965683-67d9fa39-2aa5-4628-ae3f-e96d64658a8f.png)
