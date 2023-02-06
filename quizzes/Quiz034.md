@@ -41,10 +41,6 @@ def to_roman(input:int)->str:
         raise ValueError("Error: Input must not be over 100")
 ```
 
-### Proof: 
-Input:1,5,10,11,50,51,70,71,100 | Output: I,V,X,XI,L,LI,LXX,LXXI,C
-<img width="1045" alt="Screen Shot 2023-01-19 at 22 17 35" src="https://user-images.githubusercontent.com/112055140/216815321-ad83c4e6-0bbf-480a-a0dc-606ac0ff4276.png">
+### Proof
+![Screen Shot 2023-02-06 at 20 45 29](https://user-images.githubusercontent.com/112055140/216965160-9b26c639-2156-4be3-bedf-98a4b95e64b8.png)
 
-
-Input:101 | Output: Error: "Input must not be over 100"
-<img width="1047" alt="Screen Shot 2023-01-19 at 22 17 54" src="https://user-images.githubusercontent.com/112055140/213452909-28d9e261-f04d-483d-8428-bc1946c55287.png">
