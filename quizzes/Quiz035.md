@@ -41,3 +41,6 @@ class Account:
         temp = f"New balance: {self.balance} USD"
         return temp
 ```
+
+# Proof
+  ![Screen Shot 2023-02-06 at 20 39 49](https://user-images.githubusercontent.com/112055140/216965301-b233beab-f139-4f5e-996f-d634680680ac.png)
