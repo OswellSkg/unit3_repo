@@ -40,5 +40,24 @@ for x in result:
 print(total_amount)
 ```
 
+secure_password.py:
+```.py
+from passlib.context import CryptContext
+
+pwd_config = CryptContext(schemes=["pbkdf2_sha256"],
+                          default="pbkdf2_sha256",
+                          pbkdf2_sha256__default_rounds=30000
+                          )
+
+
+def encrypt_password(user_password):
+    """ This function receives the plain text password from the user and returns the hash salted.
+    """
+    return pwd_config.encrypt(user_password)
+
+def check_password(user_password, hashed):
+    return pwd_config.verify(user_password, hashed)
+```
+
 ![Screen Shot 2023-02-24 at 15 48 31](https://user-images.githubusercontent.com/112055140/221111233-3e78f3ac-9381-4f08-8d7e-a711bb8fe82c.png)
 
